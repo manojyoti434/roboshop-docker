@@ -12,8 +12,8 @@ services:
   mongodb:
     image: manojyoti/mongodb:v1
     container_name: mongodb
-    volumes:
-    - mongodb:/data/db
+    # volumes:
+    # - mongodb:/data/db
   catalogue:
     image: manojyoti/catalogue:v1
     container_name: catalogue
@@ -37,10 +37,10 @@ services:
     - catalogue
     - redis
   mysql:
-    image: manojyoti/mysql:v1
+    image: joindevops/mysql:v1
     container_name: mysql
-    volumes:
-    - mysql:/var/lib/mysql
+    # volumes:
+    # - mysql:/var/lib/mysql
   shipping:
     image: manojyoti/shipping:v1
     container_name: shipping
@@ -53,8 +53,8 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: roboshop
       RABBITMQ_DEFAULT_PASS: roboshop123
-    volumes:
-    - rabbitmq:/var/lib/rabbitmq
+    # volumes:
+    # - rabbitmq:/var/lib/rabbitmq
   payment:
     image: manojyoti/payment:v1
     container_name: payment
