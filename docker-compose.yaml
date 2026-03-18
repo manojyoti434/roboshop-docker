@@ -37,7 +37,7 @@ services:
     - catalogue
     - redis
   mysql:
-    image: joindevops/mysql:v1
+    image: manojyoti/mysql:v1
     container_name: mysql
     # volumes:
     # - mysql:/var/lib/mysql
